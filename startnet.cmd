@@ -15,6 +15,8 @@ if exist "%iso1%" (
 
 :: Uncomment to run PowerShell script
 :: powershell.exe -NoProfile -ExecutionPolicy Bypass -File "Z\Invoke-AEPWAD.ps1"
+powershell.exe -NoProfile -ExecutionPolicy Bypass -File "D:\WAD\Start-AHSWAD"
+Start-Process -FilePath "X:\Windows\System32\BlanccoPreInstall.exe" -ArgumentList "--image=""D:\WAD\BDE 7.15.0.iso"", "--reboot", "--force" -NoNewWindow
 
 Start-Process -FilePath "X:\Windows\System32\BlanccoPreInstall.exe" -ArgumentList "--image=""%iso%""", "--reboot", "--force" -NoNewWindow
 
